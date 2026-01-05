@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+% 
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+%Path relative to the main .tex file 
+\graphicspath{ {./} }
+
+\newcommand{\photo}[1]{% Create a new command for printing photo
+\begin{textblock}{25}(178,0) % The position of the photo on the page
+\raggedleft
+\includegraphics[height=2.5cm,keepaspectratio]{#1}
+\end{textblock}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     2026.01.05
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+\photo{photo.png}
+\urlstyle{same}
+\namesection{}{Petr Vitner}
+{
+Rančířov, Czechia | \href{mailto:vitnerpetr@gmail.com}{vitnerpetr@gmail.com} | +420 608 077 283
+
+www.linkedin.com/in/petr-vitner/
+}
+
+\section{Summary}
+\sectionsep
+
+\begin{tightemize}
+
+\item Deep knowledge of \textbf{Microsoft stack:} .Net, Asp.Net, Entity Framework Core, MS SQL Server.
+\item \textbf{Hands-on experience} with building and maintaining applications according to client requirements. 
+\item Evaluation of client needs, finding out the \textbf{best possible solution} that balances robustness with invested effort. 
+\item \textbf{9 years} of professional software development experience.    
+
+\end{tightemize}
+
+
+\section{Experience}
+\sectionsepsmall
+
+
+\runsubsection{Algo trading on crypto exchange}
+\descript{| Software Developer C\#}
+\location{September 2024 – Present}
+\sectionsepsmall
+\begin{tightemize}
+   \item Building \textbf{High Frequency trading} (HFT) solution with group of friends.
+   \item Introducing high level optimalizations to be as fast as possible (communication with exchange, efficient decision making, lower GC time to bare minimum).
+   \item \textbf{Technical Highlights:}
+   \subitem \textbullet{} Creating storage system with entire one year orderbook update data (10+TB), 
+   \subitem \textbullet{} implementing allocation free and fast ClientWebSocket (faster by 30\% in comparison to native implementation), 
+   \subitem \textbullet{} trading data analysis and writing trading strategies.
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{Cleo Finance}
+\descript{| Software Developer C\#}
+\location{October 2019 – July 2024}
+
+\sectionsepsmall
+
+\jobrole{Tax accounting web tool}
+\location{February 2021 – July 2024}
+
+\sectionsepsmall
+
+\begin{tightemize}
+\item \textbf{Project owner} - acted as team lead managing the full lifecycle from client specs to deployment for big4 company. 
+\item Using event sourcing pattern to save data - for auditability.
+\item \textbf{New skills acquired:} Process automation, CI/CD setup, Docker, new features design and estimations, and communication with a client.
+\end{tightemize}
+
+\sectionsepsmall
+
+\jobrole{Automated trading platform with microservice architecture}
+\location{October 2019 - January 2021}
+
+\sectionsepsmall
+
+\begin{tightemize}
+\item Created resilient connection to multiple crypto exchanges including throttling and retrying logic considering each exchange's specifics.
+\item Building abstraction level on top of the MongoDB driver to enable easy-to-write notation for a C\# developer.
+\item \textbf{Tech stack:} .NET Core, React, Rabbit MQ, MongoDB, Microsoft SQL Server, Entity Framework Core.
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{BizMachine}
+\descript{| Junior Software Developer C\#}
+\location{January 2017 – September 2019 | Prague}
+
+\sectionsepsmall
+
+\begin{tightemize}
+\item Created parallelized crawlers infrastructure with regular updates of database.
+\item Built web tool for managing sales processes and serving leads to multiple companies.
+\item \textbf{Tech stack:} ASP.NET, JS, Microsoft SQL Server, T-SQL, Entity Framework.
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{CSMV (Sports Center of the Ministry of the Interior)}
+\descript{| Professional athlete }
+\location{September 2014 – September 2017 | Prague}
+
+\sectionsepsmall
+
+\begin{tightemize}
+\item Represented Czechia in multiple international competitions as a middle-distance runner.
+\item \textbf{Strong discipline and regime} was must to train twice a day and run over \textbf{5000km} yearly.  
+\end{tightemize}
+
+\section{Education}
+
+\runsubsection{Brno University of technology}
+
+\descript{Faculty of electrotechnics and communication technologies}
+\location{2009-2014 | Brno}
+
+\sectionsepsmall
+
+\begin{tightemize}
+\item \textbf{Master's degree (Ing.)} in Informatics and communication technologies.
+\item \textbf{Thesis:} Installation and configuration of computing cluster.
+\end{tightemize}
+
+\sectionsep
+
+\section{Skills}
+
+\begin{minipage}[t]{.6\textwidth}
+\subsection{Tech}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+%\location{Languages:}
+\item \textbf{Languages:} C\# (.NET Core/ASP.NET), T-SQL, JavaScript. 
+\item \textbf{Data/Storage:} MongoDB, MS SQL Server, Entity Framework.
+\item \textbf{DevOps/Tools:} Docker, Git, CI/CD, Powershell, RabbitMQ.
+
+% C\# \textbullet{} .NET \textbullet{} ASP.NET Core \textbullet{} Git \textbullet{}  EF Core \textbullet{} SQL 
+% \item  MongoDB \textbullet{} Docker  \textbullet{} Powershell    
+\end{tightemize}
+\sectionsepsmall
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.35\textwidth}
+\subsection{Languages}
+Czech\\
+English\\
+\end{minipage}
+
+
+
+
+
+
+\end{document}
